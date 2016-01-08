@@ -1,0 +1,20 @@
+A Homogeneous Main-Sequence Model
+ The surface conditions are:        The central conditions are:
+ Mtot =  1.000000E+03 Msun          Mc/Mtot     =  9.99241E-01
+ Rtot =  1.020998E+00 Rsun          Rc/Rtot     =  9.97000E-01
+ Ltot =  8.607100E-01 Lsun          Lc/Ltot     = -4.29290E+00
+ Teff =  5.500200E+03 K             Density     =  1.33428E+03
+ X    =  7.000000E-01               Temperature =  6.99349E+09
+ Y    =  2.920000E-01               Pressure    =  1.24943E+21 dynes/cm**2
+ Z    =  8.000000E-03               epsilon     = -7.11292E-03 ergs/s/g
+                                    dlnP/dlnT   =  3.84711E+00
+Notes:
+ (1) Mass is listed as Qm = 1.0 - M_r/Mtot, where Mtot =     1.989e+33
+ (2) Convective zones are indicated by c, radiative zones by r
+ (3) dlnP/dlnT may be limited to +99.9 or -99.9# if so it is
+ labeled by *
+   r        Qm       L_r       T        P        rho      kap      eps     dlPdlT
+7.08E+10 7.59E-04 -1.41E+34 7.47E+06 6.27E+17 6.27E+02 6.30E+01 7.33E+00 r   3.8
+7.09E+10 6.95E-05 3.29E+33 3.93E+06 5.30E+16 1.01E+02 1.15E+02 2.88E-02 r  20.2
+7.10E+10 7.29E-06 3.29E+33 3.29E+06 1.42E+15 3.22E+00 1.09E+01 2.46E-04 r   4.2
+7.11E+10 0.00E+00 3.29E+33 0.00E+00 0.00E+00 0.00E+00 0.00E+00 0.00E+00 r   4.2

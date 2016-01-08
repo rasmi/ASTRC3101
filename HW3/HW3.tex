@@ -1,0 +1,287 @@
+\documentclass[]{article}
+\usepackage{enumerate, amsmath, amssymb, amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\begin{document}
+
+\title{Astronomy C3101 \\ Modern Stellar Astrophysics \\ Homework 3}
+\author{Rasmi Elasmar}
+\date{Tuesday, November 18, 2014}
+\maketitle
+
+\begin{enumerate}[\bfseries Problem 1 -]
+\item{
+	\textit{Luminosity variation from stellar pulsation}
+	\begin{enumerate}
+	\item{
+		Estimate the resulting change in luminosity $\delta L$.
+		\\\\
+		$L = 4\pi R^2\sigma T^4$
+		\\
+		$L_0 \big(1 + \frac{\delta L}{L_0}\big) = 4\pi \big[R_0 \big(1 + \frac{\delta R}{R_0}\big)\big]^2 \sigma \big[T_0\big(1 + \frac{\delta T}{T_0}\big)\big]^4$
+		\\
+		$L_0 \big(1 + \frac{\delta L}{L_0}\big)= 4\pi \big[R_0^2\big(\frac{\delta R}{R_0}^2+2\frac{\delta R}{R_0}+1\big)\big] \sigma \big[T_0^4\big(\frac{\delta T}{T_0}^4+4 \frac{\delta T}{T_0}^3+6 \frac{\delta T}{T_0}^2+4 \frac{\delta T}{T_0}+1\big)\big]$
+		\\
+		Discarding higher-order terms (or using the Taylor expansion for brevity),
+		\\
+		$L_0 \big(1 + \frac{\delta L}{L_0}\big) \approx 4\pi \big[R_0^2\big(1+2\frac{\delta R}{R_0}\big)\big] \sigma \big[T_0^4\big(1+4 \frac{\delta T}{T_0}\big)\big]$
+		\\
+		$\frac{\delta L}{L_0} \approx  \big(1+2\frac{\delta R}{R_0}\big)\big(1+4 \frac{\delta T}{T_0}\big) - 1$
+	}
+	\item{
+		Derive a relationship between $\delta R$ and $\delta T$. 
+		\\\\
+		Gas is adiabatic, relating $\delta P$ to $\delta\rho$:
+		\\
+		$P = K_a \rho^{\gamma_a}$
+		\\
+		$P_0 \big(1 + \frac{\delta P}{P_0}\big) = K_a \big[\rho_0\big(1+ \frac{\delta\rho}{\rho_0}\big)\big]^{\gamma_a}$
+		\\
+		Taylor expanding,
+		\\
+		$\approx K_a \rho_0^{\gamma_a}\big(1+ \gamma_a\frac{\delta\rho}{\rho_0}\big)$
+		\\
+		But since 
+		\\
+		$\delta P = K_a \rho_0^{\gamma_a}\gamma_a\frac{\delta\rho}{\rho_0}$,
+		\\
+		$\frac{\delta P}{P_0} = \gamma_a\frac{\delta\rho}{\rho_0}$
+		\\\\
+		Gas is ideal, relating $\delta P$ to $\delta T$:
+		\\
+		$P = \frac{R}{\mu}\rho T$
+		\\
+		$P_0 \big(1 + \frac{\delta P}{P_0}\big) = \frac{R}{\mu}\rho_0\big(1+ \frac{\delta\rho}{\rho_0}\big) T_0\big(1 + \frac{\delta T}{T_0}\big)$
+		\\
+		$P_0 = \frac{R}{\mu}\rho_0 T_0$
+		\\
+		$1 + \frac{\delta P}{P_0} = \big(1+ \frac{\delta\rho}{\rho_0}\big) \big(1 + \frac{\delta T}{T_0}\big)$
+		\\
+		$1 + \frac{\delta P}{P_0} = 1+ \frac{\delta\rho}{\rho_0} + \frac{\delta T}{T_0} +  \frac{\delta\rho}{\rho_0} \frac{\delta T}{T_0}$
+		\\
+		Dropping higher-order terms,
+		\\
+		$\frac{\delta P}{P_0} = \frac{\delta\rho}{\rho_0} + \frac{\delta T}{T_0}$
+		\\
+		$ \frac{\delta T}{T_0} = \frac{\delta P}{P_0} - \frac{\delta\rho}{\rho_0}$
+		\\\\
+		Use homologous expansion relation to relate $\delta\rho$ to $\delta R$ (just like in Lecture 15):
+		\\
+		$dm = 4\pi R^2 \rho dR$
+		\\
+		$=4\pi \big[R_0 (1 + \frac{\delta R}{R_0})\big]^2 \rho_0\big(1+ \frac{\delta\rho}{\rho_0}\big) dR_0\big(1+\frac{\delta R}{R_0}\big)$
+		\\
+		$=4\pi R_0^2 \rho_0 dR_0\big(1 + 3\frac{\delta R}{R_0} + \frac{\delta\rho}{\rho_0})$
+		\\
+		But since $dm = 4\pi R_0^2 \rho_0 dR_0 = 0$, 
+		\\
+		$3\frac{\delta R}{R_0} + \frac{\delta\rho}{\rho_0} = 0$
+		\\
+		$\frac{\delta\rho}{\rho_0} = - 3\frac{\delta R}{R_0}$
+		\\\\
+		Taking those three relations and substituting/combining,
+		\\
+		$ \frac{\delta T}{T_0} = \frac{\delta P}{P_0} - \frac{\delta\rho}{\rho_0}$
+		\\
+		$\frac{\delta P}{P_0} = \gamma_a\frac{\delta\rho}{\rho_0}$
+		\\
+		$\Rightarrow \frac{\delta T}{T_0} =  \frac{\delta\rho}{\rho_0}(\gamma_a - 1)$
+		\\
+		$\frac{\delta\rho}{\rho_0} = - 3\frac{\delta R}{R_0}$
+		\\
+		$\Rightarrow \frac{\delta T}{T_0} =  - 3\frac{\delta R}{R_0}(\gamma_a - 1)$
+		\\
+		Peak luminosity 	}
+	\item{
+		Arrive at an estimate for the relationship between $\delta L$ and $\delta R$. Does the peak luminosity of a pulsating star with $\gamma_a = 5/3$ occur when its radius is at its maximum value or its minimum value?
+		\\
+		$\frac{\delta L}{L_0} \approx  \big(1+2\frac{\delta R}{R_0}\big)\big(1+4 \frac{\delta T}{T_0}\big) - 1$
+		\\
+		$\frac{\delta T}{T_0} =  - 3\frac{\delta R}{R_0}(\gamma_a - 1)$
+		\\
+		Substituting,
+		\\
+		$\frac{\delta L}{L_0} \approx  \big(1+2\frac{\delta R}{R_0}\big)\big(1+4 ( - 3\frac{\delta R}{R_0}(\gamma_a - 1))\big) - 1$
+		\\
+		$\frac{\delta L}{L_0} \approx  \big(1+2\frac{\delta R}{R_0}\big)\big(1- 12\frac{\delta R}{R_0}(\gamma_a - 1)\big) - 1$
+		\\
+		When $\gamma_a = 5/3$,
+		\\
+		$\frac{\delta L}{L_0} \approx  \big(1+2\frac{\delta R}{R_0}\big)\big(1- 12\frac{\delta R}{R_0}(2/3)\big) - 1$
+		\\
+		$\frac{\delta L}{L_0} \approx  \big(1+2\frac{\delta R}{R_0}\big)\big(1- 8\frac{\delta R}{R_0}\big) - 1$
+		\\
+		$\frac{\delta L}{L_0} \approx  \big(1- 6\frac{\delta R}{R_0} - 16(\frac{\delta R}{R_0})^2\big) - 1$
+		\\
+		Removing higher-order terms,
+		\\
+		$\frac{\delta L}{L_0} \approx - 6\frac{\delta R}{R_0} $
+		\\
+		There is an inverse relationship, so the peak pulsating luminosity occurs when the radius is at its minimum value.
+	}
+	\end{enumerate}
+}
+\item{
+	\textit{Generating the T vs. $\rho$ diagram}
+	\begin{enumerate}
+	\item{
+		Calculate $\mu_I, \mu_e,$ and $\mu$.
+		\\\\
+		$X = 0.75, Y= 0.25$
+		\\
+		$\frac{1}{\mu_I} = X + \frac{1}{4}Y = 0.8125$ 
+		\\
+		$\mu_I = 1.2308$
+		\\
+		$\frac{1}{\mu_e} = \frac{1}{2}(1+X) = 0.875$
+		\\
+		${\mu_e} =1.1429$
+		\\
+		$\frac{1}{\mu} = \frac{1}{\mu_I} +\frac{1}{\mu_e} = 1.6875$
+		\\
+		$\mu = 0.5926$
+		
+		
+	}
+	\item{
+		Solve for the boundary between the ideal gas zone and the non-relativistic degenerate gas zone.
+		\\
+		$K_0 \rho T = K_1\frac{1}{\mu_e^{5/3}} \rho^{5/3}$
+		\\
+		$T =\frac{ K_1}{K_0}\frac{1}{\mu_e^{5/3}} \rho^{2/3}$
+		\\
+		$log(T) =log\big(\frac{ K_1}{K_0}\frac{1}{\mu_e^{5/3}}\big) + log(\rho^{2/3})$
+		\\
+		$\frac{2}{3}log(\rho) = log(T) - log\big(\frac{ K_1}{K_0}\frac{1}{\mu_e^{5/3}}\big)$
+		\\
+		$log(\rho) = \frac{3}{2}log(T) - \frac{3}{2}log\big(\frac{ K_1}{K_0}\frac{1}{\mu_e^{5/3}}\big)$
+		\\
+		$R = 8.3145 \times 10^7 erg/K\cdot mol$
+		\\
+		$K_0 = \frac{R}{\mu}  = 1.4031\times10^8 erg/K\cdot mol$
+		\\
+		$K_1 = 1.0 \times 10^7 m^4 kg^{-2/3} s^{-2} = 1 \times 10^{13} cm^4 g^{-2/3} s^{-2}$
+		\\
+		${\mu_e} =1.1429$
+		\\
+		$log(\rho) = \frac{3}{2}log(T) - 7.1344$
+		\\
+	}
+	\item{
+		Solve for the boundary between the non-relativistic and relativistic degenerate gas zones.
+		$K_1\frac{1}{\mu_e^{5/3}} \rho^{5/3} = K_2\frac{1}{\mu_e^{4/3}} \rho^{4/3}$
+		\\
+		$\rho^{1/3} = \frac{K_2}{K_1}\mu_e^{1/3}$
+		\\
+		$log(\rho^{1/3}) = log\big(\frac{K_2}{K_1}\mu_e^{1/3}\big)$
+		\\
+		$log(\rho) = 3log\big(\frac{K_2}{K_1}\mu_e^{1/3}\big)$
+		\\
+		$K_1 = 1.0 \times 10^7 m^4 kg^{-2/3} s^{-2} = 1 \times 10^{13} cm^4 g^{-2/3} s^{-2}$
+		\\
+		$K_2 = 1.24 \times 10^{10} m^3 kg^{-1/3} s^{-1} = 1.24 \times 10^{15} cm^3 g^{-1/3} s^{-1}$	
+		\\
+		${\mu_e} =1.1429$
+		\\
+		$log(\rho) = 6.3383$
+	}
+	\item{
+		Solve for the boundary between the ideal gas zone and the relativistic degenerate gas zone.
+		\\
+		$K_0\rho T = K_2\frac{1}{\mu_e^{4/3}} \rho^{4/3}$
+		\\
+		$T = \frac{K_2}{K_0}\frac{1}{\mu_e^{4/3}} \rho^{1/3}$
+		\\
+		$log(T) = log\big(\frac{K_2}{K_0}\frac{1}{\mu_e^{4/3}} \rho^{1/3}\big)$
+		\\
+		$\frac{1}{3}log(\rho) = log(T) - log\big(\frac{K_2}{K_0}\frac{1}{\mu_e^{4/3}}\big)$
+		\\
+		$log(\rho) = 3log(T) - 3log\big(\frac{K_2}{K_0}\frac{1}{\mu_e^{4/3}}\big)$
+		\\
+		$K_0 = \frac{R}{\mu}  = 1.4031\times10^8 erg/K\cdot mol$
+		\\
+		$K_2 = 1.24 \times 10^{10} m^3 kg^{-1/3} s^{-1} = 1.24 \times 10^{15} cm^3 g^{-1/3} s^{-1}$
+		\\
+		${\mu_e} =1.1429$
+		\\
+		$log(\rho) = 3log(T) - 20.607$
+	}
+	\item{
+		Solve for the value of $(T,\rho)$ where the ideal gas pressure, non-relativistic degenerate gas pressure, and relativistic gas pressure are all equal.
+		\\
+		
+	}
+	\item{
+		Solve for the boundary between the ideal gas zone and the radiation pressure taking the boundary as $P_{rad} = 10P_{gas}$.
+		\\
+		$10 \big(K_0\rho T\big) = \frac{1}{3}aT^4$
+		\\
+		$K_0 \rho = \frac{1}{30}aT^3$
+		\\
+		$log(\rho) = log\big(\frac{a}{30K_0}T^3\big)$
+		\\
+		$log(\rho) = 3log(T) + log\big(\frac{a}{30K_0}\big)$
+		\\
+		$R = 8.3145 \times 10^7 erg/K\cdot mol$
+		\\
+		$K_0 = \frac{R}{\mu} = 1.4031\times10^8 erg/K\cdot mol$
+		\\
+		$a = 7.6 \times 10^{-15} erg/cm^3/K^4$
+		\\
+		$log(\rho) = 3log(T) - 23.7434$
+	}
+	\item{
+		Plot the boundaries between the different zones for $logT(K)$ = 6--10 and $log\rho(g\, cm^{-3})$ = 0--10.
+	}
+	\end{enumerate}
+}
+\item{
+	\textit{Convection}
+	\begin{enumerate}
+	\item{
+		Show that the envelope of a star that has a Kramers Law opacity (with a = 1, b = -3.5) isstable against convection if the equation of state is that of an ideal gas with $\gamma = 5/3$.
+		\\\\
+		Kramer's law: $\kappa = c\rho^a T^b$
+		\\
+		$\kappa = c\rho T^{-3.5}$
+		\\
+		Gas is adiabatic 
+		\\
+		Gas is ideal: $P = \frac{R}{\mu}\rho T$
+		\\
+		$\rho = \frac{\mu}{R}\frac{P}{T}$,
+		$T = \frac{\mu}{R}\frac{P}{\rho}$
+		\\
+		As related in lecture 16,
+		\\
+		$dP = \frac{R}{\mu}\big(\rho\frac{dT}{dr} + T\frac{d\rho}{dr}\big)dr$
+		\\
+		$ = \big(\frac{P}{T}\frac{dT}{dr} + \frac{P}{\rho}\frac{d\rho}{dr}\big)dr$
+		\\
+		$P = K_a\rho^{\gamma}$
+		\\
+		$dP = K_a \gamma \rho^{\gamma -1}\frac{d\rho}{dr}dr$
+		\\
+		$= \gamma \frac{P}{\rho}\frac{d\rho}{dr}dr$
+		\\
+		$ \gamma \frac{P}{\rho}\frac{d\rho}{dr} = \frac{P}{T}\frac{dT}{dr} + \frac{P}{\rho}\frac{d\rho}{dr}$
+		\\
+		$\frac{dT}{dr} = (\gamma -1) \frac{T}{P}\frac{P}{\rho}\frac{d\rho}{dr}$
+		\\
+		$= \big(\frac{\gamma -1}{\gamma}\big) \frac{T}{P}\frac{dP}{dr}$
+		\\
+		$\frac{dln(T)}{dln(P)} = \frac{PdT}{TdP} = \frac{\gamma -1}{\gamma}	$
+		$= \frac{5/3 -1}{5/3}$
+		$= \frac{2/3}{5/3} = \frac{2}{5}$ 
+		
+	}
+	\item{
+		Use this result to predict which main-sequence stars should have convective envelopes.
+	}
+	\end{enumerate}
+}
+\item{
+(see attached)
+}
+\end{enumerate}
+\end{document}
